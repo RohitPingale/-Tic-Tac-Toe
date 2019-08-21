@@ -1,21 +1,34 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Form, FormControl} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div class="w3-sidebar w3-bar-block" style="width:25%">
-          <a href="#" class="w3-bar-item w3-button">Link 1</a>
-          <a href="#" class="w3-bar-item w3-button">Link 2</a>
-          <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div>
-
-        <div style="margin-left:25%">
-        ... page content ...
-        </div> 
-      </header>
+    <div id="root">
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">Tic-Tac-Toe</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>  
     </div>
   );
 }
