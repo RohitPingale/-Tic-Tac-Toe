@@ -1,12 +1,27 @@
-import React from 'react';
-import TicNavbar from './Navbar';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Home} from './home';
+import {Aboutus} from './about';
+import {TicTacToe} from './tictactoe';
+import {Nomatch} from './nomatch';
 
-function App() {
+
+class App extends Component {
+  render() {
   return (
-    <div id="root">
-      <TicNavbar />
-    </div>
-  );
+    <div id = 'root'>
+      <React.Fragment>
+        <Router>
+          <Switch>
+             <Route exact path = '/Home' component = {Home} />
+             <Route  path = '/Aboutus' component = {Aboutus} />
+             <Route  path = '/tictactoe' component = {TicTacToe} />
+             <Route  component = {Nomatch} />
+          </Switch>
+        </Router>
+      </React.Fragment>
+    </div>    
+    );
+  }
 }
-
 export default App;
