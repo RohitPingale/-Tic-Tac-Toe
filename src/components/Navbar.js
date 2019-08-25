@@ -1,33 +1,36 @@
-import React, { Component } from "react";
-import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import {Form, FormControl} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
-import {ListGroup,div} from 'react-bootstrap';
+import React from "react";
+import {Navbar, Nav} from 'react-bootstrap';
+import  {styled}  from 'styled-components';
 
-class TicNavbar extends Component{
-  render(){
-    return(
-            <Navbar bg="light" expand="lg">
-             <Navbar.Brand href="#home">Tic-Tac-Toe</Navbar.Brand>
-             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-             <Navbar.Collapse id="basic-navbar-nav">
-               <Nav className="mr-auto">
-                 <Nav.Link href="#home">Home</Nav.Link>
-                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                   <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                   <NavDropdown.Divider />
-                   <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                 </NavDropdown>
-               </Nav>
-               <Form inline>
-                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                 <Button variant="outline-success">Search</Button>
-               </Form>
-             </Navbar.Collapse>
-           </Navbar>
-    ) 
+
+const Styles = styled.div`
+ .navbar {
+  background-color: #222;
+ }
+
+ .navbar-brand, .navbar-nav, .nav-link {
+  color: #bbb; 
+
+  &:hover {
+    color: white;
   }
-} 
- export default TicNavbar;     
+ }
+`;
+
+
+export const TicNavbar = () => 
+( 
+  <Styles>
+    <Navbar expand='lg'>
+      <Navbar.Brand herf='/'>TicTacToe</Navbar.Brand>
+      <Navbar.Toggle arid-controls='basic-navbar-nav' />
+      <Navbar.Collapse id='basic-navbar-nav'>
+        <Nav className = 'mr-auto'>
+          <Nav.Item><Nav.Link herf ='/home'>Home</Nav.Link></Nav.Item> 
+          <Nav.Item><Nav.Link herf ='/aboutus'>About Us</Nav.Link></Nav.Item>
+        </Nav>
+      </Navbar.Collapse>       
+    </Navbar> 
+  </Styles>
+) 
+ 

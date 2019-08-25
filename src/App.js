@@ -13,8 +13,8 @@ class App extends Component {
       <React.Fragment>
         <Router>
           <Switch>
-             <Route exact path = '/Home' component = {Home} />
-             <Route  path = '/Aboutus' component = {Aboutus} />
+             <Route  path = '/(home|)' component = {Home} />
+             <Route  path = '/aboutus' component = {Aboutus} />
              <Route  path = '/tictactoe' component = {TicTacToe} />
              <Route  component = {Nomatch} />
           </Switch>

@@ -1,8 +1,10 @@
 import React  from 'react';
-import TicNavbar from './Navbar';
+import {TicNavbar} from './components/Navbar';
+import {Layout} from './components/Layout';
+
 
 export const TicTacToe = () => (
-	<div>
-		<TicNavbar/>
-	</div>
+	<Layout>
+			<TicNavbar/>
+	</Layout>
 )
