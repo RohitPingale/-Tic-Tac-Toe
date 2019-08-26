@@ -4,7 +4,7 @@ import {Home} from './home';
 import {Aboutus} from './about';
 import {TicTacToe} from './tictactoe';
 import {Nomatch} from './nomatch';
-
+import { Card, Button, Image } from "react-bootstrap";
 
 class App extends Component {
   render() {
@@ -17,6 +17,19 @@ class App extends Component {
              <Route  path = '/aboutus' component = {Aboutus} />
              <Route  path = '/tictactoe' component = {TicTacToe} />
              <Route  component = {Nomatch} />
+              <div> 
+                <Image src= {require("./images/UnderConstruction.png")}/>
+                <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={require("./images/index.jpg")} />
+                  <Card.Body>
+                    <Card.Title>Tic-Tac-Toe</Card.Title>
+                    <Card.Text>
+                      Play Tictactoe
+                    </Card.Text>
+                    <Button variant="primary" href = '/tictactoe'>Go</Button>
+                  </Card.Body>
+                </Card>
+              </div>
           </Switch>
         </Router>
       </React.Fragment>
