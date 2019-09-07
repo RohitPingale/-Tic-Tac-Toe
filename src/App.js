@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Home} from './home';
 import {Aboutus} from './about';
 import {TicTacToe} from './tictactoe';
-import {Nomatch} from './nomatch';
 import { Card, Button, Image } from "react-bootstrap";
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
              <Route  path = '/(home|)' component = {Home} />
              <Route  path = '/aboutus' component = {Aboutus} />
              <Route  path = '/tictactoe' component = {TicTacToe} />
-             <Route  component = {Nomatch} />
               <div> 
                 <Image src= {require("./images/UnderConstruction.png")}/>
                 <Card style={{ width: '18rem' }}>
