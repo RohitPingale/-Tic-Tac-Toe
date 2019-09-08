@@ -7,7 +7,7 @@ const Styles = styled.div`
  .navbar {
   width: 100%;
   float: left;
-  margin: 0 0 1em 0;
+  margin: 0 0 0 0;
   padding: 0;
   background-color: #f2f2f2;
  }

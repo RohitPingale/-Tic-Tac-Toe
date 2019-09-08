@@ -14,6 +14,5 @@ export const Home  = () => (
 		    <Button variant="primary" href = '/tictactoe'>Go</Button>
 		  </Card.Body>
 		</Card>
-
 	</div>
 	)
