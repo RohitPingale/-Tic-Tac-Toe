@@ -1,21 +1,7 @@
-var express = require('express');
-var app = express();
-
-app.get('/home',(req , res) => {
-	res.send(require('./App.js'));
+const request = require('request');
+request('http://www.google.com', function (error, response, body) {
+  console.error('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  // console.log('body:', body); // Print the HTML for the Google homepage.
 });
-
-app.get('/tictactoe',(req , res) => {
-	res.send(require('./App.js'));
-});
-
-app.get('/nomatch',(req , res) => {
-	res.send(require('./App.js'));
-});
-
-app.get('/about',(req , res) => {
-	res.send(require('./App.js'));
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port,() => console.log(`Listening on port ${port}`));
+request('http://google.com/doodle.png').pipe(fs.createWriteStream('doodle.png'))
